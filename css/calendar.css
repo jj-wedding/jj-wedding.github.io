@@ -50,8 +50,10 @@ Calendar Styling */
 }
 
 .calendar .days li .date {
-    margin: 0.5rem 0;
+    margin: 0.7rem 0;
 }
+
+
 
 .calendar .days li .event {
     /*cursor: pointer;*/
