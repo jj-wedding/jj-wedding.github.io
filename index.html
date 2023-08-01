@@ -726,23 +726,45 @@ url('../fonts/jj/MFGuaiMei_Noncommercial-Regular.woff') format('woff'),
 <script type="text/javascript">
 
 	$(document).ready(function(){
-
-		var copyToClipboard = function(element){
-			var $element = $(element)
-			$element.focus();
-			navigator.clipboard.writeText($element.val())
-					.then(() => {
-						alert("계좌번호가 복사되었습니다.\n" + $element.val());
-					})
-		};
-
-		$('.bank-account').click(function(){
-			console.log($(this))
-			copyToClipboard($(this));
-		});
+		// var copyToClipboard = function(element){
+		// 	var $element = $(element)
+		// 	$element.focus();
+		// 	navigator.clipboard.writeText($element.val())
+		// 			.then(() => {
+		// 				alert("계좌번호가 복사되었습니다.\n" + $element.val());
+		// 			})
+		// };
+		//
+		// $('.bank-account').click(function(){
+		// 	console.log($(this))
+		// 	copyToClipboard($(this));
+		// });
 
 	})
+	document.addEventListener("DOMContentLoaded", () => {
+		const buttons = document.querySelectorAll("button.bank-account");
 
+		buttons.forEach((button) => {
+			button.addEventListener("click", () => {
+				const copyValue = button.getAttribute("value");
+
+				// 텍스트를 복사하기 위해 임시 input 요소를 생성
+				const tempInput = document.createElement("input");
+				tempInput.value = copyValue;
+				document.body.appendChild(tempInput);
+
+				// 복사된 텍스트를 선택하고 복사
+				tempInput.select();
+				document.execCommand("copy");
+
+				// 임시 input 요소를 제거
+				document.body.removeChild(tempInput);
+
+				// 복사 완료 메시지를 표시
+				alert("계좌번호: '" + copyValue + "'가 복사되었습니다.");
+			});
+		});
+	});
   	var container = document.getElementById('map');
   	var options = {
 		center: new daum.maps.LatLng(37.5222395047947, 127.039012903503),
