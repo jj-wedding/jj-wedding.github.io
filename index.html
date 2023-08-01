@@ -46,11 +46,16 @@
 			font-weight:normal;
 		}
 
+		.fold > ul > li > p > .bank-account{
+			font-size: 12px; !important;
+		}
+
 	</style>
 
 	<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css">-->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/jejumyeongjo.css">
 	<!--<link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo" rel="stylesheet">-->
+	<link rel="stylesheet" href="css/fold.css">
 	<!-- Calendar -->
 	<link rel="stylesheet" href="css/calendar.css">
 	<!-- Animate.css -->
@@ -138,22 +143,19 @@
 		<div class="row animate-box">
 			<div class="col-md-12">
 				<div class="col-md-12 text-center section-heading svg-sm colored">
-					<p style="font-size: 12px; color: #A9A9A9; margin-bottom: 0px;">
-						세상이 다 겨울이어도<br/> <!-- TODO-->
-						우리 사랑은 늘 봄처럼 따뜻하고<br/>
-						간혹 여름처럼 뜨거울 겁니다.<br/>
-						- 이수동, &lt;사랑가&gt; -
+					<p style="font-family: MFGuaiMei_Noncommercial-Regular"></p>
+					<p style="font-size: 15px; color: #A9A9A9; margin-bottom: 0px;">
+						서로를 위하는 마음이 일가월중(<data style="font-family: MFGuaiMei_Noncommercial-Regular">日加月增</data>)하여<br/>
+						애지경지, 부부지례(<data style="font-family: MFGuaiMei_Noncommercial-Regular">愛之敬之, 夫婦之禮</data>)임을 명심하며,<br/>
+						종고지락(<data style="font-family: MFGuaiMei_Noncommercial-Regular">鐘鼓之樂</data>)하는 날을 시작하려 합니다.<br/>
 					</p>
 					<br/>
-					
 					<img src="https://cdn.jsdelivr.net/gh/jj-wedding/jj-wedding.github.io@master/images/photo/plane.jpg" width="150" height="100"/>
 					<br/>
-					<p style="font-size: 14px; margin-bottom: 0px;">
-						꽃 피는 봄,  <br/> <!--TODO-->
-						그동안 저희가 다져온 인연이란 씨앗을<br/>
-						수줍은 들꽃처럼 피워내려 합니다.<br/>
-						함께 오셔서 저희의 첫걸음을<br/>
-						축복해주시면 감사하겠습니다.
+					<p style="font-size: 15px; margin-bottom: 0px;">
+						감홍난자(<data style="font-family: MFGuaiMei_Noncommercial-Regular">酣紅爛紫</data>)의 계절에<br/>
+						새로이 시작하는 저희를 위하여<br/>
+						귀한 발걸음해 주시면 감사하겠습니다.<br/>
 					</p>
 				</div>
 			</div>
@@ -606,98 +608,50 @@
 		</div>
 	</div>
 	<div class="row mt-4">
-		<div class="col-md-12">
-			<div class="accordion " id="accordionFlushExample">
-				<div class="accordion-item">
-					<h2 class="accordion-header" id="flush-headingOne">
-						<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-							<div class="accordion-header-text">신랑 측 계좌번호</div>
+		<div class="fold">
+			<h1>계좌번호</h1>
+			<ul>
+				<li>
+					<input type="checkbox" checked>
+					<i></i>
+					<h2>신랑측 계좌번호</h2>
+					<p>기업은행 054-134888-01-010 주상곤
+						<button id="sanggon-account" type="button" class="btn btn-outline-secondary btn-sm pull-right bank-account" value="054-134888-01-010">
+							<span class="icon-clipboard"></span>
+							복사하기
 						</button>
-					</h2>
-					<div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne">
-						<div class="accordion-body">
-							<p>기업은행 054-134888-01-010
-								<button id="sanggon-account" type="button" class="btn btn-outline-secondary btn-sm pull-right bank-account" value="054-134888-01-010">
-									<span class="icon-clipboard2"></span>
-									복사하기
-								</button>
-							</p>
-							<p>주상곤
-								<button id="sanggon-kakaopay" type="button" class="btn btn-outline-secondary btn-sm pull-right" value="054-134888-01-010">
-									<span class="icon-comment"></span>
-									송금하기
-								</button>
-							</p>
-						</div>
-<!--						<hr class="hr hr-blurry" />-->
-<!--						<div class="accordion-body">-->
-<!--							<p>농협 130044-51-144676-->
-<!--								<button id="seungwoo-father" type="button" class="btn btn-outline-secondary btn-sm pull-right bank-account" value="130044-51-144676">-->
-<!--									<span class="icon-clipboard2"></span>-->
-<!--									복사하기-->
-<!--								</button>-->
-<!--							</p>-->
-<!--							<p>한정수</p>-->
-<!--						</div>-->
-<!--						<hr class="hr hr-blurry" />-->
-<!--						<div class="accordion-body">-->
-<!--							<p>국민은행 164501-04-140984-->
-<!--								<button id="seungwoo-mother" type="button" class="btn btn-outline-secondary btn-sm pull-right bank-account" value="164501-04-140984">-->
-<!--									<span class="icon-clipboard2"></span>-->
-<!--									복사하기-->
-<!--								</button>-->
-<!--							</p>-->
-<!--							<p>소영희</p>-->
-<!--						</div>--> <!--todo 계좌-->
-					</div>
-				</div>
-			</div>
-
-			<div class="accordion mt-2" id="accordionFlushExample">
-				<div class="accordion-item">
-					<h2 class="accordion-header" id="flush-headingTwo">
-						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-							<div class="accordion-header-text">신부 측 계좌번호</div>
+					</p>
+<!--					<p>기업은행 054-134888-01-010 주상곤-->
+<!--						<button id="sanggon-account" type="button" class="btn btn-outline-secondary btn-sm pull-right bank-account" value="054-134888-01-010">-->
+<!--							<span class="icon-clipboard"></span>-->
+<!--							복사하기-->
+<!--						</button>-->
+<!--					</p>-->
+				</li>
+				<li>
+					<input type="checkbox" checked>
+					<i></i>
+					<h2>신부측 계좌번호</h2>
+					<p>국민은행 771301-01-779907 정가주
+						<button id="gajoo-account" type="button" class="btn btn-outline-secondary btn-sm pull-right bank-account" value="771301-01-779907">
+							<span class="icon-clipboard"></span>
+							복사하기
 						</button>
-					</h2>
-					<div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo">
-						<div class="accordion-body">
-							<p>기업은행 054-134888-01-010 <!--todo  계좌-->
-								<button id="gajoo-account" type="button" class="btn btn-outline-secondary btn-sm pull-right bank-account" value="054-134888-01-010">
-									<span class="icon-clipboard2"></span>
-									복사하기
-								</button>
-							</p>
-							<p>정가주
-								<button id="gajoo-kakaopay" type="button" class="btn btn-outline-secondary btn-sm pull-right" value="054-134888-01-010">
-									<span class="icon-comment"></span>
-									송금하기
-								</button>
-							</p>
-						</div>
-<!--						<hr class="hr hr-blurry" />-->
-<!--						<div class="accordion-body">-->
-<!--							<p>기업은행 088-065956-02-018-->
-<!--								<button id="chaeeun-father" type="button" class="btn btn-outline-secondary btn-sm pull-right bank-account" value="088-065956-02-018">-->
-<!--									<span class="icon-clipboard2"></span>-->
-<!--									복사하기-->
-<!--								</button>-->
-<!--							</p>-->
-<!--							<p>유상보</p>-->
-<!--						</div>-->
-<!--						<hr class="hr hr-blurry" />-->
-<!--						<div class="accordion-body">-->
-<!--							<p>국민은행 823-21-0357-504-->
-<!--								<button id="chaeeun-mother" type="button" class="btn btn-outline-secondary btn-sm pull-right bank-account" value="823-21-0357-504">-->
-<!--									<span class="icon-clipboard2"></span>-->
-<!--									복사하기-->
-<!--								</button>-->
-<!--							</p>-->
-<!--							<p>이은경</p>-->
-<!--						</div>--> <!--todo 계좌-->
-					</div>
-				</div>
-			</div>
+					</p>
+					<p>농협은행 601018-52-310305 정형렬
+						<button id="gajoo-account" type="button" class="btn btn-outline-secondary btn-sm pull-right bank-account" value="601018-52-310305">
+							<span class="icon-clipboard"></span>
+							복사하기
+						</button>
+					</p>
+					<p>농협은행 601018-51-047511 류오순
+						<button id="gajoo-account" type="button" class="btn btn-outline-secondary btn-sm pull-right bank-account" value="601018-51-047511">
+							<span class="icon-clipboard"></span>
+							복사하기
+						</button>
+					</p>
+				</li>
+			</ul>
 		</div>
 	</div>
 </div>
@@ -737,7 +691,14 @@
 		</div>
 	</div>
 </div>
+<style>
+@font-face {
+	font-family: "MFGuaiMei_Noncommercial-Regular";
+	font-style: normal;
+url('../fonts/jj/MFGuaiMei_Noncommercial-Regular.woff') format('woff'),
+}
 
+</style>
 <!-- jQuery -->
 <script src="/js/jquery.min.js"></script>
 <!-- jQuery Easing -->
@@ -780,19 +741,12 @@
 			copyToClipboard($(this));
 		});
 
-		$('#seungwoo-kakaopay').click(function(){
-			location.href = "https://qr.kakaopay.com/Ej8dJ5etU"
-		});
-
-		$('#chaeeun-kakaopay').click(function(){
-			location.href = "https://qr.kakaopay.com/FHzPiOZQm"
-		})
 	})
 
   	var container = document.getElementById('map');
   	var options = {
 		center: new daum.maps.LatLng(37.5222395047947, 127.039012903503),
-		level: 2
+		level: 3
   	};
 
   	var map = new daum.maps.Map(container, options);
